@@ -196,7 +196,6 @@
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s ease;
-            cursor: pointer;
         }
 
         .btn-play:hover {
@@ -219,36 +218,49 @@
 
     <main class="container">
         <section class="featured">
-            <!-- Your featured music content -->
+            <!-- ... (Your featured music content) ... -->
         </section>
 
         <section class="about">
-            <!-- Your about section content -->
+            <!-- ... (Your about section content) ... -->
         </section>
 
-        <section class="library">
-            <h2 class="section-heading">Music Library</h2>
-            <div class="music-list">
-                <!-- Embed the YouTube video -->
-                <div class="music-item">
-                    <div class="video-container">
-                        <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/0aoNAe3BhAg" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="music-overlay">
-                        <h3 class="music-title">Whispering Winds</h3>
-                        <p class="music-description">A soothing composition that captures the gentle whispers of nature.</p>
-                        <a href="#video" class="btn-play">Play Video</a>
-                        <div class="related-content">Related: <a href="#">Soothing Nature Sounds</a></div>
-                    </div>
-                </div>
-                <!-- ... (Add more music items with related content) ... -->
+        <section class="playlist">
+            <h2 class="section-heading">Playlist</h2>
+            <div class="playlist-items">
+                <!-- ... (Your playlist items) ... -->
             </div>
-            <a href="#video" class="btn">Browse All Music</a>
+        </section>
+
+        <section class="video-player">
+            <div class="video-container">
+                <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE?autoplay=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-controls">
+                <button id="playButton">Play</button>
+                <button id="pauseButton">Pause</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2023 Ishta Music. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videoPlayer = document.getElementById("videoPlayer");
+            const playButton = document.getElementById("playButton");
+            const pauseButton = document.getElementById("pauseButton");
+
+            playButton.addEventListener("click", function () {
+                videoPlayer.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            });
+
+            pauseButton.addEventListener("click", function () {
+                videoPlayer.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            });
+        });
+    </script>
 </body>
 </html>
