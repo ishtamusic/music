@@ -5,145 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishta Music</title>
     <style>
-        /* Reset some default styles */
-        body, h1, h2, h3, p, ul, li {
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ff6600;
-        }
-        main {
-            padding: 20px;
-        }
-        .music-item {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* ... (Your existing styles) ... */
+
+        /* Additional Styles */
+        .section-heading {
+            margin-top: 40px;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        .music-icon {
-            background-color: #333;
-            color: white;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-size: 24px;
+            font-weight: bold;
         }
-        .music-details {
-            flex: 1;
+
+        .music-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-gap: 20px;
+            margin-bottom: 40px;
         }
-        footer {
-            background-color: #333;
+
+        .music-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        .music-item:hover {
+            transform: translateY(-10px) rotateX(10deg);
+        }
+
+        .music-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .music-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .music-item:hover .music-overlay {
+            opacity: 1;
+        }
+
+        .music-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .music-description {
+            font-size: 14px;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            max-width: 80%;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Ishta Music</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Music Library</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- ... (Your existing header content) ... -->
     </header>
 
     <main class="container">
         <section class="featured">
-            <h2>Featured Music</h2>
-            <div class="music-item">
-                <div class="music-icon">A</div>
-                <div class="music-details">
-                    <h3>Soulful Serenade</h3>
-                    <p>Experience the beauty of soulful melodies that will touch your heart.</p>
-                </div>
-            </div>
-            <div class="music-item">
-                <div class="music-icon">B</div>
-                <div class="music-details">
-                    <h3>Rhythmic Grooves</h3>
-                    <p>Get your groove on with our energetic and rhythm-packed tracks.</p>
-                </div>
-            </div>
+            <!-- ... (Your existing featured music content) ... -->
         </section>
 
         <section class="about">
-            <h2>About Ishta Music</h2>
-            <p>Ishta Music is a platform dedicated to delivering exceptional music that resonates with your soul. Our mission is to provide you with an unparalleled auditory experience that uplifts, inspires, and connects.</p>
+            <!-- ... (Your existing about section content) ... -->
         </section>
 
         <section class="library">
-            <h2>Music Library</h2>
+            <h2 class="section-heading">Music Library</h2>
             <div class="music-list">
                 <div class="music-item">
-                    <div class="music-icon">C</div>
-                    <div class="music-details">
-                        <h3>Whispering Winds</h3>
-                        <p>A soothing composition that captures the gentle whispers of nature.</p>
+                    <img class="music-image" src="music1.jpg" alt="Music Track 1">
+                    <div class="music-overlay">
+                        <h3 class="music-title">Whispering Winds</h3>
+                        <p class="music-description">A soothing composition that captures the gentle whispers of nature.</p>
+                        <a href="#" class="btn">Listen Now</a>
                     </div>
                 </div>
-                <div class="music-item">
-                    <div class="music-icon">D</div>
-                    <div class="music-details">
-                        <h3>Dance of Joy</h3>
-                        <p>An upbeat track that will make you dance with unbridled joy.</p>
-                    </div>
-                </div>
-                <div class="music-item">
-                    <div class="music-icon">E</div>
-                    <div class="music-details">
-                        <h3>Reflective Moments</h3>
-                        <p>Contemplate and introspect with this reflective and contemplative melody.</p>
-                    </div>
-                </div>
+                <!-- ... (Add more music items with similar structure) ... -->
             </div>
+            <a href="#" class="btn">Browse All Music</a>
         </section>
     </main>
 
