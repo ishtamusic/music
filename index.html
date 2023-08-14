@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishta Music</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul, li {
             margin: 0;
             padding: 0;
+        }
+        
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
         }
         header {
             background-color: #333;
@@ -26,7 +31,7 @@
         }
         nav a {
             text-decoration: none;
-            color: white; /* Changed color to white */
+            color: white;
             font-weight: bold;
         }
         main {
@@ -36,10 +41,6 @@
         }
         section {
             margin-bottom: 40px;
-        }
-        .music-item img {
-            max-width: 100%;
-            height: auto;
         }
         footer {
             background-color: #333;
@@ -66,12 +67,10 @@
         <section class="featured">
             <h2>Featured Music</h2>
             <div class="music-item">
-                <img src="music1.jpg" alt="Featured Track 1">
                 <h3>Soulful Serenade</h3>
                 <p>Experience the beauty of soulful melodies that will touch your heart.</p>
             </div>
             <div class="music-item">
-                <img src="music2.jpg" alt="Featured Track 2">
                 <h3>Rhythmic Grooves</h3>
                 <p>Get your groove on with our energetic and rhythm-packed tracks.</p>
             </div>
@@ -86,17 +85,14 @@
             <h2>Music Library</h2>
             <div class="music-list">
                 <div class="music-item">
-                    <img src="song1.jpg" alt="Song 1">
                     <h3>Whispering Winds</h3>
                     <p>A soothing composition that captures the gentle whispers of nature.</p>
                 </div>
                 <div class="music-item">
-                    <img src="song2.jpg" alt="Song 2">
                     <h3>Dance of Joy</h3>
                     <p>An upbeat track that will make you dance with unbridled joy.</p>
                 </div>
                 <div class="music-item">
-                    <img src="song3.jpg" alt="Song 3">
                     <h3>Reflective Moments</h3>
                     <p>Contemplate and introspect with this reflective and contemplative melody.</p>
                 </div>
