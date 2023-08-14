@@ -14,6 +14,12 @@
         /* Global styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         header {
             background-color: #333;
@@ -21,26 +27,52 @@
             text-align: center;
             padding: 1rem 0;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         nav ul {
             list-style: none;
-            padding: 0;
+            display: flex;
         }
         nav ul li {
-            display: inline;
             margin-right: 20px;
         }
         nav a {
             text-decoration: none;
             color: white;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff6600;
         }
         main {
-            max-width: 960px;
-            margin: 0 auto;
             padding: 20px;
         }
-        section {
-            margin-bottom: 40px;
+        .music-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .music-icon {
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .music-details {
+            flex: 1;
         }
         footer {
             background-color: #333;
@@ -63,16 +95,22 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <section class="featured">
             <h2>Featured Music</h2>
             <div class="music-item">
-                <h3>Soulful Serenade</h3>
-                <p>Experience the beauty of soulful melodies that will touch your heart.</p>
+                <div class="music-icon">A</div>
+                <div class="music-details">
+                    <h3>Soulful Serenade</h3>
+                    <p>Experience the beauty of soulful melodies that will touch your heart.</p>
+                </div>
             </div>
             <div class="music-item">
-                <h3>Rhythmic Grooves</h3>
-                <p>Get your groove on with our energetic and rhythm-packed tracks.</p>
+                <div class="music-icon">B</div>
+                <div class="music-details">
+                    <h3>Rhythmic Grooves</h3>
+                    <p>Get your groove on with our energetic and rhythm-packed tracks.</p>
+                </div>
             </div>
         </section>
 
@@ -85,16 +123,25 @@
             <h2>Music Library</h2>
             <div class="music-list">
                 <div class="music-item">
-                    <h3>Whispering Winds</h3>
-                    <p>A soothing composition that captures the gentle whispers of nature.</p>
+                    <div class="music-icon">C</div>
+                    <div class="music-details">
+                        <h3>Whispering Winds</h3>
+                        <p>A soothing composition that captures the gentle whispers of nature.</p>
+                    </div>
                 </div>
                 <div class="music-item">
-                    <h3>Dance of Joy</h3>
-                    <p>An upbeat track that will make you dance with unbridled joy.</p>
+                    <div class="music-icon">D</div>
+                    <div class="music-details">
+                        <h3>Dance of Joy</h3>
+                        <p>An upbeat track that will make you dance with unbridled joy.</p>
+                    </div>
                 </div>
                 <div class="music-item">
-                    <h3>Reflective Moments</h3>
-                    <p>Contemplate and introspect with this reflective and contemplative melody.</p>
+                    <div class="music-icon">E</div>
+                    <div class="music-details">
+                        <h3>Reflective Moments</h3>
+                        <p>Contemplate and introspect with this reflective and contemplative melody.</p>
+                    </div>
                 </div>
             </div>
         </section>
